@@ -1,0 +1,2 @@
+* * * * * echo "Start rsync to Storage" >> /var/log/cron.log 2>&1
+* * * * * bash /tasks/tasks_rsync.sh >> /var/log/cron.log 2>&1

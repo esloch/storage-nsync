@@ -1,0 +1,13 @@
+version: "3.4"
+services:
+
+    nsync:            
+      build:
+          context: ".."
+          dockerfile: "docker/Dockerfile"
+      hostname: cron_rsync
+      env_file:
+        - ../.env
+      volumes: 
+        - ${DOCKER_HOST_STORAGE_DIR}:/Storage/
+      restart: always
